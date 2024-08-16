@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+    color: #34302a;
+    background-color: #faf5ea;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    background-color: #faf5eae3;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px 10px 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-area {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    justify-items: center;
+    margin: 20px;
+}
+
+.app-item {
+    display: flex;
+    margin: 5px;
+    flex-direction: row;
+    align-items: center;
+    width: 85vw;
+    max-width: 530px;
+    border-radius: 10px;
+}
+
+.app-item:hover, .app-item:hover > *, .app-item:hover > * > *{
+    background: #f6f6f6;
+}
+
+.app-item, .app-item > * {
+    cursor: pointer;
+}
+
+.app-text {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin-right: 40px;
+}
+
+.icon {
+    width: 100px;
+    margin: 20px;
+    margin-left: 30px;
+    margin-right: 0px;
+}
+
+p {
+    font-weight: 200;
+    font-size: max(22px, 2vw);
+    margin: 50px;
+    margin-top: 350px;
+    text-align: center;
+    color: rgb(65, 65, 65);
+}
+
+h1 {
+    font-weight: 500;
+    font-size: max(60px, 5vw);
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    background-color: transparent;
+    font-weight: 600;
+    margin: 20px 20px 20px 0px;
+    font-size: 25px;
+    text-align: left;
+}
+
+h3 {
+    font-weight: 400;
+    margin-left: 20px;
+    font-size: max(17px, 1.3vw);
+    text-align: left;
+    color: rgb(155, 155, 155);
+}
+
+h4 {
+    font-weight: 300;
+    font-size: max(60px, 5vw);
+    margin-top: 20px;
+    text-align: center;
+}
+
+h5 {
+    margin: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+h6 {
+    font-size: 20px;
+    margin: 30px;
+    margin-top: 0px;
+    font-weight: 400;
+    color: rgb(155, 155, 155);
+}
+
+#home-button {
+    border: none;
+    margin: 20px;
+    margin-right: auto;
+    padding: 15px 30px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    text-align: center;
+    margin: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.1rem;
+    height: 60px;
+    width: max(15vw, 180px);
+    border-radius: 40px;
+    border-width: 1px;
+    border-color: rgb(162, 162, 162);
+    border-style: solid;
+    background-color: transparent;
+}
+
+.notes-button:hover {
+    cursor: pointer;
+    border-color: #f1bf42;
+    color: #f1bf42;
+    transition: 0.3s;
+}
