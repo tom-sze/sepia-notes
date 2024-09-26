@@ -1,8 +1,0 @@
-<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-	<g>
-		<ellipse fill="#f7cc6d" cx="200" cy="200" rx="180" ry="180"/>
-		<rect fill="#fff" x="100" y="115" width="200" height="40" rx="15"/>
-		<rect fill="#fff" x="100" y="180" width="200" height="40" rx="15"/>
-		<rect fill="#fff" x="100" y="245" width="200" height="40" rx="15"/>
-	</g>
-</svg>

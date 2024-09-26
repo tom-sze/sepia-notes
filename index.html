@@ -1,30 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/notes_logo.svg">
-    <title>Notes</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='icon' href='logo.svg'>
+    <title>Sepia Notes</title>
 
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <link rel='stylesheet' href='styles.css'>
+    <script defer src='script.js'></script>
 </head>
 
 
 <body>
-    <header>
-        <img class="logo" src="images/notes_logo.svg">
-        <h2>Sepia Notes</h2>
-    </header>
-    <section>
-        <p>
-            A cross-platform note-taking app
-        </p>
-        <div class="button-container">
-            <button class="notes-button" onclick="location.href='https://tom-sze.github.io/notes/';">WEB APP</button>
-        </div> 
-    </section>
+    <div class='header-container'>
+        <div class='header'>
+            <div>
+                <a href='/index.html' class='logo'>
+                    <img src='logo.svg'>
+                    <h5>Sepia Notes</h5>
+                </a>
+            </div>
+            <div class='toolbar-buttons'>
+                <a href='/about.html'>
+                    <p>About</p>
+                </a>
+                <a href='/index.html' class='open-webapp-button'>
+                    <p>
+                        <img src='/images/open.svg' />
+                        Open
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="section-container">
+        <div class='section landing-page'>
+            <h1>Free, from the ground up.</h1>
+            <p>
+                A cross-platform note taking web app. <br>
+                Backup and sync notes across your devices with built-in GitHub support.
+            </p>
+            <a href='/index.html' class='open-webapp-button'>
+                <p>
+                    <img src='/images/open.svg' />
+                    Open Web App
+                </p>
+            </a>
+        </div>
+    </div>
+    <div class="section-container">
+        <div class='section mockups'>
+            <div>
+                <img src='/images/laptop.webp' />
+            </div>
+            <div>
+                <img src='/images/phone.webp' />
+            </div>
+        </div>
+    </div>
+    <div class="section-container">
+        <div class='section'>
+            <div class='feature-container'>
+                <div>
+                    <img src='/images/optimized.svg' />
+                    <h2>Highly optimized</h2>
+                    <p>Very low memory use, and an exceedingly small application size of &lt2MB.</p>
+                </div>
+                <div>
+                    <img src='/images/webapp.svg' />
+                    <h2>Web app</h2>
+                    <p>Allows us to forego an Electron backend. Instead, the browser does the heavy lifting,
+                        leading to a memory use of &lt50MB.</p>
+                </div>
+                <div>
+                    <img src='/images/sync.svg' />
+                    <h2>Sync with GitHub</h2>
+                    <p>The built-in GitHub client allows for seamless note backups, and cross-device sync.</p>
+                </div>
+                <div>
+                    <img src='/images/free.svg' />
+                    <h2>Free, by design</h2>
+                    <p>We will never collect your data, serve ads, or paywall any features.</p>
+                </div>
+                <div>
+                    <img src='/images/continual.svg' />
+                    <h2>Continual improvements</h2>
+                    <p>A clean code base, and active developement ensure a constant current of improvements.</p>
+                </div>
+                <div>
+                    <img src='/images/formatting.svg' />
+                    <h2>Full text formatting</h2>
+                    <p>Full text formatting is always available, regardless of whether you're on desktop or mobile.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-container">
+        <div class='section'>
+            <h1>Text formatting</h1>
+        </div>
+    </div>
+
 
 </body>
 
