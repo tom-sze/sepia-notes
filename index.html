@@ -16,16 +16,16 @@
     <div class='header-container'>
         <div class='header'>
             <div>
-                <a href='/index.html' class='logo'>
+                <div class='logo'>
                     <img src='logo.svg'>
                     <h5>Sepia Notes</h5>
-                </a>
+                </div>
             </div>
             <div class='toolbar-buttons'>
-                <a href='/about.html'>
+                <a onclick="scrollSmoothTo('about-container')">
                     <p>About</p>
                 </a>
-                <a href='/index.html' class='open-webapp-button'>
+                <a href='index.html' class='open-webapp-button'>
                     <p>
                         <img src='images/open.svg' />
                         Open
@@ -41,7 +41,7 @@
                 A cross-platform note taking web app. <br>
                 Backup and sync notes across your devices with built-in GitHub support.
             </p>
-            <a href='/index.html' class='open-webapp-button'>
+            <a href='index.html' class='open-webapp-button'>
                 <p>
                     <img src='images/open.svg' />
                     Open Web App
@@ -93,12 +93,57 @@
                     <h2>Full text formatting</h2>
                     <p>Full text formatting is always available, regardless of whether you're on desktop or mobile.</p>
                 </div>
+                <div>
+                    <img src='images/theme.svg' />
+                    <h2>Color schemes</h2>
+                    <p>Not a fan of the sepia color scheme? No worries, we've got you covered!</p>
+                </div>
+                <div>
+                    <img src='images/soon.svg' />
+                    <h2>More features coming soon</h2>
+                    <p>Mobile gestures, image support, web app installing, and note encryption will be arriving
+                        in the coming weeks.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="section-container">
+    <div class="section-container" id="about-container">
         <div class='section'>
-            <h1>Text formatting</h1>
+            <h1>About</h1>
+
+            <h2>Technology</h2>
+            <p>
+                Sepia Notes is a web app, built with the React javascript framework. To allow for seamless
+                git merges, we convert the user-generated rich text to markdown under the hood.
+            </p>
+
+            <h2>Privacy Policy</h2>
+            <p>
+                We do not collect user data, or serve
+                advertisements. The only 3rd party connection is to a CORS (cross-origin resource sharing) server, which
+                enables us to perform git fetch, and push operations from within the browser.
+            </p>
+
+            <h2>Who we are</h2>
+            <p>
+                Although this app is a one-person project, I do my best to squash bugs, optimize performance, and
+                introduce new features periodically.
+            </p>
+            <p>
+                Some major features are scheduled to arrive in the coming weeks, but I will always prioritize
+                development in a way that ensures Sepia Notes remains free.
+            </p>
+
+            <h2>Special thanks to</h2>
+            <p>
+                <a href="https://www.clever-cloud.com/?utm_source=ref&utm_medium=link&utm_campaign=isomorphic-git">
+                    CleverCloud
+                </a>
+                for generously sponsoring, and hosting the CORS proxy server that enables network git operations from
+                the browser.
+
+            </p>
         </div>
     </div>
 

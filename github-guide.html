@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='icon' href='logo.svg'>
+    <title>GitHub Guide</title>
+
+    <link rel='stylesheet' href='styles.css'>
+    <script defer src='script.js'></script>
+</head>
+
+
+<body>
+    <div class="section-container">
+        <div class="section github-guide">
+            <h1>GitHub Guide</h1>
+            <h2>Step 1: Create a new repository</h2>
+            <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository"
+                target="_blank">
+                <p>
+                    Help
+                    <img src='images/open.svg' />
+                </p>
+            </a>
+            <p>
+                Please avoid using an existing (non-empty) GitHub repository, as this may interfere with the app's
+                file/folder management. Do not add any files to the repository after creation.
+            </p>
+            <p>
+                Once you finish creating the repository, please paste the http (not ssh) URL into Sepia Notes' settings.
+            </p>
+            <h2>Step 2. Create a GitHub personal access token</h2>
+            <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic"
+                target="_blank">
+                <p>
+                    Help
+                    <img src='images/open.svg' />
+                </p>
+            </a>
+            <p>
+                Both a classic token, and a fine-grained token will work. However, you can't set fine-grained tokens to
+                never expire, so you will have to re-create it at least once a year. Whichever token you choose, please
+                ensure that Sepia Notes has the permission to fetch and push.
+            </p>
+            <br>
+            <p>
+                In the case of the fine-grained token:
+            </p>
+            <img src='images/finegrained-token.webp'>
+            <p>
+                In the case of the classic token:
+            </p>
+            <img src='images/classic-token.webp'>
+            <h2>Step 3. Copy the token into Sepia Notes settings</h2>
+            <p>
+                You can now copy and paste your token into Sepia Notes' settings, and press the "save" button. Please
+                save a copy of this token if plan on using Sepia Notes on another device. Otherwise, you will have to
+                create a new one.
+            </p>
+            <p>
+                <i>Please be advised that we are in the process of simplifying the connection to GitHub, and we
+                    appologise for any undue frustration this procedure may have caused you.</i>
+            </p>
+        </div>
+    </div>
+</body>
