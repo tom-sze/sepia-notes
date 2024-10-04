@@ -147,7 +147,7 @@ p {
 
     h5 {
         line-height: 120%;
-        font-weight: 625;
+        font-weight: 700;
         font-size: max(var(--font-size), min(3vw, calc(var(--font-size) + 5px)));
     }
 }
