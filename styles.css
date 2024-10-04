@@ -56,10 +56,10 @@ body {
 
 button {
     border: none;
-}
 
-button:hover {
-    opacity: 80%;
+    &:hover {
+        opacity: 80%;
+    }
 }
 
 a {
@@ -124,27 +124,32 @@ p {
         display: flex;
         align-items: center;
         margin: 15px 0;
+
+        &:nth-child(1) {
+            margin-right: 0;
+        }
+
+        &:nth-child(2) {
+            margin-left: 0;
+        }
     }
 }
 
-.header div:nth-child(1) {
-    margin-right: 0;
-}
+.logo {
+    pointer-events: none;
 
-.header div:nth-child(2) {
-    margin-left: 0;
-}
+    img {
+        width: 35px;
+        height: 35px;
+        margin-right: 15px;
+        filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
+    }
 
-.logo img {
-    width: 35px;
-    height: 35px;
-    margin-right: 15px;
-    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
-}
-
-.header h5 {
-    font-weight: 600;
-    font-size: max(var(--font-size), min(3vw, calc(var(--font-size) + 5px)));
+    h5 {
+        line-height: 120%;
+        font-weight: 625;
+        font-size: max(var(--font-size), min(3vw, calc(var(--font-size) + 5px)));
+    }
 }
 
 .open-webapp-button p {
@@ -175,27 +180,29 @@ p {
     flex-direction: column;
     align-items: start;
     margin-top: 26vh;
-}
 
-.landing-page>p {
-    margin: 30px 0;
-    font-weight: 500;
-    font-size: max(calc(var(--font-size) + 3px), min(2.5vw, calc(var(--font-size) + 7px)));
-    opacity: 80%;
-}
+    >p {
+        margin: 30px 0;
+        font-weight: 500;
+        font-size: max(calc(var(--font-size) + 3px), min(2.5vw, calc(var(--font-size) + 7px)));
+        opacity: 80%;
+    }
 
-.landing-page .open-webapp-button:hover {
-    opacity: 80%;
-}
+    .open-webapp-button {
+        &:hover {
+            opacity: 80%;
+        }
 
-.landing-page .open-webapp-button p {
-    padding: 15px 25px 15px 20px;
-    color: var(--background);
-    background-color: var(--color);
-}
+        p {
+            padding: 15px 25px 15px 20px;
+            color: var(--background);
+            background-color: var(--color);
+        }
 
-.landing-page .open-webapp-button img {
-    filter: var(--background-image-filter);
+        img {
+            filter: var(--background-image-filter);
+        }
+    }
 }
 
 .mockups {
