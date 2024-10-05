@@ -17,7 +17,7 @@
     --font-size: 18px;
     --color: #34302a;
     --background: #faf5ea;
-    --active: #dfba6b;
+    --active: rgba(223, 186, 107, 0.2);
     --color-image-filter: invert(13%) sepia(11%) saturate(758%) hue-rotate(357deg) brightness(103%) contrast(86%);
     --background-image-filter: invert(96%) sepia(3%) saturate(1110%) hue-rotate(331deg) brightness(104%) contrast(96%);
     --active-image-filter: invert(79%) sepia(32%) saturate(587%) hue-rotate(357deg) brightness(93%) contrast(88%);
@@ -41,7 +41,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    background: radial-gradient(800px 500px at 80% 550px, var(--active) 10%, var(--background) 80%);
+    background: radial-gradient(min(1000px, 80vw) min(1000px, 80vw) at 110% 550px, var(--active) 100%, var(--background) 80%);
 }
 
 button {
@@ -103,7 +103,8 @@ p {
     width: 100vw;
     display: flex;
     justify-content: center;
-    background-color: var(--background);
+    background-color: color-mix(in srgb, var(--background) 80%, transparent);
+    backdrop-filter: blur(10px);
 }
 
 .header {
@@ -269,7 +270,7 @@ p {
     margin-bottom: 100px;
     border-radius: 40px;
     position: relative;
-    background-color: color-mix(in srgb, var(--active) 20%, transparent);
+    background-color: var(--active);
     box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.1);
 
     h2 {
