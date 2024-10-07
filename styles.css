@@ -17,11 +17,12 @@
     --font-size: 18px;
     --color: #34302a;
     --background: #faf5ea;
-    --active: rgba(223, 186, 107, 0.2);
-    --color-image-filter: invert(13%) sepia(11%) saturate(758%) hue-rotate(357deg) brightness(103%) contrast(86%);
+    --background-secondary: color-mix(in srgb, white 60%, transparent);
+    --color-image-filter: invert(100%) sepia(8%) saturate(31%) hue-rotate(181deg) brightness(107%) contrast(100%);
     --background-image-filter: invert(96%) sepia(3%) saturate(1110%) hue-rotate(331deg) brightness(104%) contrast(96%);
     --active-image-filter: invert(79%) sepia(32%) saturate(587%) hue-rotate(357deg) brightness(93%) contrast(88%);
     --section-width: 1130px;
+    --border-radius: 10px;
 
     color: var(--color);
     background-color: var(--background);
@@ -41,7 +42,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    background: radial-gradient(min(1000px, 80vw) min(1000px, 80vw) at 110% 550px, var(--active) 100%, var(--background) 80%);
+    background: radial-gradient(min(1000px, 80vw) min(1000px, 80vw) at 110% 550px, rgba(223, 186, 107, 0.2) 100%, var(--background) 80%);
+    background-repeat: no-repeat;
 }
 
 button {
@@ -64,15 +66,12 @@ a {
         transition: 0.3s ease;
     }
 
-    >* {
-        color: var(--color);
-    }
-
     p {
+        font-weight: 300;
         display: flex;
-        padding: 10px 20px;
-        font-size: max(calc(var(--font-size) - 2px), min(3vw, var(--font-size)));
-        border-radius: 999px;
+        padding: 10px 12px;
+        padding-right: 14px;
+        border-radius: var(--border-radius);
         opacity: 1;
     }
 
@@ -85,6 +84,7 @@ h1 {
     font-weight: 600;
     font-size: max(40px, min(5vw, 55px));
     letter-spacing: -0.03em;
+    color: var(--color);
 }
 
 h2 {
@@ -92,24 +92,28 @@ h2 {
 }
 
 p {
-    font-size: calc(var(--font-size) - 0.5px);
+    font-size: calc(var(--font-size) - 1px);
     font-weight: 400;
     opacity: 0.7;
 }
 
 .header-container {
     position: fixed;
+    margin-top: 20px;
     z-index: 1000;
-    width: 100vw;
+    width: min(calc(var(--section-width) * .8), 90vw);
+    border-radius: calc(var(--border-radius) * 1.25);
+    left: 50%;
+    transform: translate(-50%, 0);
     display: flex;
     justify-content: center;
-    background-color: color-mix(in srgb, var(--background) 80%, transparent);
+    background-color: var(--background-secondary);
     backdrop-filter: blur(10px);
+    box-shadow: 0 5px 3px 0px rgba(0, 0, 0, 0.035);
+
 }
 
 .header {
-    margin: 0 5vw;
-    max-width: var(--section-width);
     display: flex;
     justify-content: space-between;
     flex: 1;
@@ -117,7 +121,12 @@ p {
     div {
         display: flex;
         align-items: center;
-        margin: 13px 0;
+        margin: 7px;
+        margin-right: 11px;
+
+        >a {
+            padding-left: 7px;
+        }
 
         &:nth-child(1) {
             margin-right: 0;
@@ -133,8 +142,8 @@ p {
     pointer-events: none;
 
     img {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         margin-right: 15px;
         filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
     }
@@ -142,19 +151,20 @@ p {
     h5 {
         line-height: 120%;
         font-weight: 500;
-        font-size: max(calc(var(--font-size) + 2px), min(4vw, calc(var(--font-size) + 7px)));
+        font-size: max(calc(var(--font-size) + 2px), min(4vw, calc(var(--font-size) + 3px)));
     }
 }
 
-.open-webapp-button p {
-    padding-right: 25px;
-    border-radius: 999px;
-    font-weight: 500;
-    background-color: color-mix(in srgb, #34302a 8%, transparent);
-}
+.open-webapp-button {
+    p {
+        font-weight: 400;
+        background-color: var(--color);
+        color: var(--background);
+    }
 
-.open-webapp-button img {
-    filter: var(--color-image-filter);
+    img {
+        filter: var(--color-image-filter);
+    }
 }
 
 .section-container {
@@ -177,31 +187,15 @@ p {
 
     >p {
         margin: 30px 0;
-        font-weight: 500;
+        font-weight: 300;
         font-size: max(calc(var(--font-size) + 3px), min(2.5vw, calc(var(--font-size) + 7px)));
-        opacity: 80%;
-    }
-
-    .open-webapp-button {
-        &:hover {
-            opacity: 80%;
-        }
-
-        p {
-            padding: 15px 25px 15px 20px;
-            color: var(--background);
-            background-color: var(--color);
-        }
-
-        img {
-            filter: var(--background-image-filter);
-        }
+        opacity: 1;
     }
 }
 
 .mockups {
     position: relative;
-    margin-bottom: 120px;
+    margin-bottom: 150px;
 
     div {
         display: flex;
@@ -213,9 +207,10 @@ p {
         min-width: 700px;
         border-radius: 13px;
         box-shadow:
-            0 0 0 max(0.85vw, 10px) var(--color),
-            0 0 0 max(1.05vw, 12px) #b4b4b4,
-            10px 10px 30px 15px rgba(0, 0, 0, 0.3);
+            0 0 0 1px rgb(226, 226, 226),
+            0 0 0 max(1vw, 10px) white,
+            0 0 0 max(1.1vw, 11px) #d4d4d4,
+            15px 15px 30px 15px rgba(0, 0, 0, 0.4);
     }
 
     div:last-child {
@@ -228,24 +223,28 @@ p {
         img {
             max-width: 22%;
             min-width: 175px;
-            border-radius: 10px;
+            border-radius: 15px;
             box-shadow:
-                0 0 0 max(0.7vw, 7px) var(--color),
+                0 0 0 max(0.7vw, 7px) black,
                 0 0 0 max(0.9vw, 8.5px) #b4b4b4,
-                10px 10px 30px 15px rgba(0, 0, 0, 0.3);
+                15px 15px 30px 15px rgba(0, 0, 0, 0.4);
         }
     }
 }
 
-.feature-container {
+.features {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    gap: 30px;
     margin-bottom: 40px;
 
     >div {
         display: flex;
         flex-direction: column;
+        background-color: color-mix(in srgb, white 60%, transparent);
+        border-radius: 15px;
+        padding: 15px 30px 40px 30px;
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.035);
 
         * {
             padding-top: 10px;
@@ -270,7 +269,9 @@ p {
     margin-bottom: 100px;
     border-radius: 40px;
     position: relative;
-    background-color: var(--active);
+    border: 1px color-mix(in srgb, var(--color) 15%, transparent) solid;
+    background-color: color-mix(in srgb, white 60%, transparent);
+
     box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.1);
 
     h2 {
