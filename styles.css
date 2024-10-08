@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 @media only screen and (max-width: 850px) {
     .section-container:has(.mockups) {
@@ -33,7 +34,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins";
     background-color: transparent;
     font-synthesis: none;
 }
@@ -43,9 +44,10 @@ body {
     flex-direction: column;
     align-items: stretch;
     background-image:
-        radial-gradient(min(1000px, 90vw) min(1000px, 90vw) at 110% 550px, rgba(223, 186, 107, 0.2) 100%, transparent 80%),
-        radial-gradient(min(800px, 80vw) min(800px, 80vw) at -10% 2000px, rgba(223, 186, 107, 0.2) 100%, transparent 80%),
-        radial-gradient(min(300px, 50vw) min(300px, 50vw) at 40% 2500px, rgba(223, 186, 107, 0.2) 100%, transparent 80%);
+        radial-gradient(circle min(1000px, 90vw) at 110% 550px, rgba(223, 186, 107, 0.2) 100%, transparent 80%),
+        radial-gradient(circle min(800px, 80vw) at -10% 2000px, rgba(223, 186, 107, 0.2) 100%, transparent 80%),
+        radial-gradient(circle min(300px, 50vw) at 40% 2500px, rgba(223, 186, 107, 0.2) 100%, transparent 80%),
+        radial-gradient(circle min(600px, 120vw) at bottom right, rgba(223, 186, 107, 0.2) 100%, transparent 80%);
     background-repeat: no-repeat;
 }
 
@@ -81,13 +83,6 @@ a {
     img {
         margin-right: 10px;
     }
-}
-
-h1 {
-    font-weight: 600;
-    font-size: max(40px, min(5vw, 55px));
-    letter-spacing: -0.03em;
-    color: var(--color);
 }
 
 h2 {
@@ -188,10 +183,20 @@ p {
     align-items: start;
     margin-top: 26vh;
 
+    h1 {
+        margin-bottom: 30px;
+        font-family: "Poppins";
+        font-weight: 600;
+        font-size: max(40px, min(5vw, 50px));
+        letter-spacing: -0.03em;
+        color: var(--color);
+    }
+
     >p {
-        margin: 30px 0;
+        font-family: "Merriweather";
+        margin-bottom: 50px;
         font-weight: 300;
-        font-size: max(calc(var(--font-size) + 3px), min(2.5vw, calc(var(--font-size) + 7px)));
+        font-size: max(calc(var(--font-size) + 4px), min(2.5vw, calc(var(--font-size) + 7px)));
         opacity: 1;
     }
 }
@@ -200,33 +205,34 @@ p {
     position: relative;
     margin-bottom: 150px;
 
-    div {
-        display: flex;
-        margin: 20px;
-    }
+    div:first-child {
 
-    div:first-child img {
-        margin-left: 10px;
         max-width: 80%;
         min-width: 700px;
-        border-radius: 13px;
-        box-shadow: 0 0 0 1px rgb(226, 226, 226),
-            0 0 0 max(1vw, 10px) white,
-            0 0 0 max(1.1vw, 11px) #d4d4d4,
-            15px 15px 30px 15px rgba(0, 0, 0, 0.4);
+        padding: min(4vw, 25px);
+        padding-bottom: min(3.5vw, 22px);
+        backdrop-filter: blur(8px);
+        background-color: color-mix(in srgb, white 40%, transparent);
+        border-radius: calc(var(--border-radius) * 3);
+        box-shadow: 15px 15px 25px 5px rgba(0, 0, 0, 0.2);
+
+        img {
+            width: 100%;
+            border-radius: calc(var(--border-radius) * 1.5);
+            box-shadow: 0 0 0 2px #ededed;
+        }
     }
 
     div:last-child {
         position: absolute;
         bottom: -60px;
         right: 35px;
-        justify-content: end;
-        width: auto;
+        max-width: 22%;
+        min-width: 175px;
 
         img {
-            max-width: 22%;
-            min-width: 175px;
-            border-radius: 15px;
+            width: 100%;
+            border-radius: calc(var(--border-radius) * 1.5);
             box-shadow: 0 0 0 max(0.7vw, 7px) black,
                 0 0 0 max(0.9vw, 8.5px) #b4b4b4,
                 15px 15px 30px 15px rgba(0, 0, 0, 0.4);
