@@ -16,7 +16,7 @@
 :root {
     --font-size: 18px;
     --color: #34302a;
-    --background: #faf5ea;
+    --background: #f8f8f8;
     --background-secondary: color-mix(in srgb, white 60%, transparent);
     --color-image-filter: invert(100%) sepia(8%) saturate(31%) hue-rotate(181deg) brightness(107%) contrast(100%);
     --background-image-filter: invert(96%) sepia(3%) saturate(1110%) hue-rotate(331deg) brightness(104%) contrast(96%);
@@ -42,7 +42,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    background: radial-gradient(min(1000px, 80vw) min(1000px, 80vw) at 110% 550px, rgba(223, 186, 107, 0.2) 100%, var(--background) 80%);
+    background-image:
+        radial-gradient(min(1000px, 90vw) min(1000px, 90vw) at 110% 550px, rgba(223, 186, 107, 0.2) 100%, transparent 80%),
+        radial-gradient(min(800px, 80vw) min(800px, 80vw) at -10% 2000px, rgba(223, 186, 107, 0.2) 100%, transparent 80%),
+        radial-gradient(min(300px, 50vw) min(300px, 50vw) at 40% 2500px, rgba(223, 186, 107, 0.2) 100%, transparent 80%);
     background-repeat: no-repeat;
 }
 
@@ -207,8 +210,7 @@ p {
         max-width: 80%;
         min-width: 700px;
         border-radius: 13px;
-        box-shadow:
-            0 0 0 1px rgb(226, 226, 226),
+        box-shadow: 0 0 0 1px rgb(226, 226, 226),
             0 0 0 max(1vw, 10px) white,
             0 0 0 max(1.1vw, 11px) #d4d4d4,
             15px 15px 30px 15px rgba(0, 0, 0, 0.4);
@@ -225,8 +227,7 @@ p {
             max-width: 22%;
             min-width: 175px;
             border-radius: 15px;
-            box-shadow:
-                0 0 0 max(0.7vw, 7px) black,
+            box-shadow: 0 0 0 max(0.7vw, 7px) black,
                 0 0 0 max(0.9vw, 8.5px) #b4b4b4,
                 15px 15px 30px 15px rgba(0, 0, 0, 0.4);
         }
