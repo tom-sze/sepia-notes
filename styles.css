@@ -332,6 +332,7 @@ ul {
     }
 
     p {
+        font-size: var(--font-size);
         margin: 5px 0;
 
         * {
