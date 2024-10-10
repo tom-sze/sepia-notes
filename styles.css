@@ -187,14 +187,14 @@ ul {
     h1 {
         margin-bottom: 30px;
         font-weight: 500;
-        font-size: max(50px, min(5vw, 58px));
+        font-size: max(40px, min(5vw, 58px));
         letter-spacing: -0.03em;
     }
 
     h4 {
         margin-bottom: 50px;
         font-weight: 300;
-        font-size: max(calc(var(--font-size) + 4px), min(2.5vw, calc(var(--font-size) + 7px)));
+        font-size: max(calc(var(--font-size) + 2px), min(2.5vw, calc(var(--font-size) + 7px)));
         opacity: 1;
     }
 }
@@ -251,23 +251,22 @@ ul {
         display: flex;
         flex-direction: column;
         flex: 1;
-        padding: 25px 40px 50px 40px;
+        padding: min(8.5vw, 40px);
         background-color: var(--background-secondary);
         border-radius: calc(var(--border-radius) * 3.5);
         box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.04);
 
         h2 {
-            padding-top: 25px;
+            margin-top: 25px;
             font-size: calc(var(--font-size) + 5px);
         }
 
         p {
-            padding-top: 15px;
+            margin: 15px 0 10px 0;
         }
 
         img {
-            padding-top: 10px;
-            width: 45px;
+            width: 40px;
         }
     }
 }
@@ -279,18 +278,8 @@ ul {
     gap: 30px;
     margin-bottom: 60px;
 
-    h1 {
-        font-size: calc(var(--font-size) + 15px);
-        margin-bottom: 20px;
-    }
-
-    p {
-        font-size: calc(var(--font-size) + 1px);
-        opacity: .8;
-    }
-
     >div {
-        padding: 30px;
+        padding: min(6vw, 30px);
         min-width: 200px;
         max-width: 450px;
         display: flex;
@@ -304,6 +293,16 @@ ul {
         }
     }
 
+    h1 {
+        font-size: calc(var(--font-size) + 15px);
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: calc(var(--font-size) + 1px);
+        opacity: .8;
+    }
+
     img {
         width: 100%;
         flex: 1;
@@ -315,7 +314,8 @@ ul {
 #about-container .section {
 
     max-width: calc(var(--section-width) - 450px);
-    padding: 50px 60px 100px 60px;
+    padding: min(10vw, 60px);
+    padding-top: min(7vw, 50px);
     margin-bottom: 100px;
     border-radius: 40px;
     position: relative;
